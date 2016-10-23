@@ -31,4 +31,5 @@ RUN npm set progress=false && \
 
 EXPOSE 9100
 
-CMD ["grunt", "server"]
+# `grunt server` via `/bin/sh -c` because SIGINT is ineffective
+CMD grunt server
